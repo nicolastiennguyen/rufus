@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/nicolastiennguyen/rufus#readme",
   "dependencies": {
-    "gitkit": "^0.1.0",
+    "gitkit": "^0.0.0",
     "isomorphic-git": "^1.21.0",
     "node": "^19.4.0",
     "simple-git": "^3.15.1"
