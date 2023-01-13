@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/nicolastiennguyen/rufus/issues"
   },
-  "homepage": "https://github.com/nicolastiennguyen/rufus#readme"
+  "homepage": "https://github.com/nicolastiennguyen/rufus#readme",
+  "dependencies": {
+    "isomorphic-git": "^1.21.0"
+  }
 }
