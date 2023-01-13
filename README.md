@@ -6,4 +6,6 @@
 
 ## Getting Started
 
-Run `npm install` to retrieve dependencies and then in the terminal, run the script `npm run print` to figure out if it was indeed Rufus or not.
+1. Fork and clone the repo. Then navigate to the root directory.
+2. Run `npm install` to retrieve dependencies.
+3. In the terminal, run the script `npm run print` to figure out if it was indeed Rufus or not.
