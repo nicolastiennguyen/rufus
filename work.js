@@ -3,7 +3,11 @@ import { exec } from "child_process"
 // prints active branch
 exec("git branch --format='%(refname:short)'", (err, res) => {
     if (err) console.log(err)
-    if (res) console.log('active branch:', res)
+    if (res) {
+        // removes trailing line break created by console.log
+        let resWithoutLineBreaks = res.replaceAll('\n', '')
+        console.log('active branch:', resWithoutLineBreaks)
+    }
 });
 
 // prints whether repository files have been modified
