@@ -3,7 +3,7 @@ import { exec } from "child_process"
 // prints active branch
 exec("git branch --format='%(refname:short)'", (err, res) => {
     if (err) console.log(err)
-    res ? console.log('active branch:', res) : null
+    if (res) console.log('active branch:', res)
 });
 
 // prints whether repository files have been modified
@@ -19,3 +19,7 @@ exec("git log --since '1 week ago'", (err, res) => {
 })
 
 // prints whether the current head commit was authored by Rufus
+exec("git log --author=Rufus", (err, res) => {
+    if (err) console.log(err)
+    res ? console.log('blame Rufus: True') : console.log('blame Rufus: False')
+})
