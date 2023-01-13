@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "print": "git branch --show-current"
+    "print": "node work.js"
   },
   "repository": {
     "type": "git",
