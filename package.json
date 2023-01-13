@@ -1,0 +1,19 @@
+{
+  "name": "rufus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "print": "git branch --show-current"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolastiennguyen/rufus.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicolastiennguyen/rufus/issues"
+  },
+  "homepage": "https://github.com/nicolastiennguyen/rufus#readme"
+}
