@@ -12,16 +12,10 @@ exec('git rev-parse --abbrev-ref HEAD', (err, res) => {
 });
 
 // prints whether repository files have been modified
-exec('git status', (err, res) => {
+exec('git status --porcelain=v1', (err, res) => {
     if (err) {
         console.log(err)
     }
 
-    if (typeof res === 'string') {
-        console.log('local changes:', true)
-        console.log(res, 'res TRUE')
-    } else {
-        console.log('local changes:', false)
-        console.log(res, 'res FALSE')
-    }
+    res ? console.log('local changes: True') : console.log('local changes: False')
 });
