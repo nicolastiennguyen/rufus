@@ -1,7 +1,7 @@
 import { exec } from "child_process"
 
 // prints active branch
-exec('git rev-parse --abbrev-ref HEAD', (err, res) => {
+exec("git branch --format='%(refname:short)'", (err, res) => {
     if (err) console.log(err)
     res ? console.log('active branch:', res) : null
 });
@@ -9,7 +9,6 @@ exec('git rev-parse --abbrev-ref HEAD', (err, res) => {
 // prints whether repository files have been modified
 exec('git status --porcelain=v1', (err, res) => {
     if (err) console.log(err)
-
     res ? console.log('local changes: True') : console.log('local changes: False')
 });
 
