@@ -1,23 +1,11 @@
-// import { simpleGit, CleanOptions } from 'simple-git';
+import { exec } from "child_process"
 
-// simpleGit().clean(CleanOptions.FORCE);
+exec('git rev-parse --abbrev-ref HEAD', (err, stdout, stderr) => {
+    if (err) {
+        console.log(err)
+    }
 
-// const git = simpleGit();
-// try {
-//   await console.log(git.branchLocal())
-// } catch (e) {
-//    console.log(e, 'ERROR')
-// }
-
-
-import GitKit from 'gitkit';
-import NativeFS from 'gitkit/lib/fs/native';
-
-// Prepare the filesystem
-var fs = NativeFS(process.cwd());
-
-// Create a repository instance
-var repo = GitKit.Repository.createWithFS(fs, isBare);
-
-GitKit.BranchUtils.list(repo)
-    .then(function(branches) { console.log(branches) })
+    if (typeof stdout === 'string') {
+      console.log('active branch:', stdout)
+    }
+});
