@@ -17,3 +17,5 @@ exec("git log --since '1 week ago'", (err, res) => {
     if (err) console.log(err)
     res ? console.log('recent commit: True') : console.log('recent commit: False')
 })
+
+// prints whether the current head commit was authored by Rufus
